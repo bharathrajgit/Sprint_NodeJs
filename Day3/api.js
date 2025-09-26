@@ -49,12 +49,6 @@ const userShema = new mongoose.Schema(userSchemaRule)
 
 const UserModel = mongoose.model('UserModel', userShema)
 
-/**********Helper Function**********/
-const getUserDetails = (userId) => {
-    return userDataStore.find(user => user.id == userId);
-};
-
-
 /**********Handler Fuction**********/ 
 const createUserHandler = async(req, res) => {
     try{
